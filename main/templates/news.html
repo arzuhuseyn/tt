@@ -1,0 +1,60 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="xeberler_banner">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>Əsas Səhifə / Xəbərlər</p>
+                <h2>Sonuncu Xəbərlər</h2>
+            </div>
+        </div>
+    </section>
+    <div style="position: relative">
+            <div class="white-wrap-top"></div>
+        </div>
+    <section class="latest_news">
+            <div class="last_three_news row">
+                {% for news in object_list %}
+                <div class="col-4">
+                        <div class="news_box">
+                            <a href="{% url 'news-detail' news.id %}">
+                            <div class="news_image_box" style="background-image:url({{news.image.url}})">
+                            </div>
+                            <h2>{{news.title}}</h2>
+                            <p>{{news.featuredtext}}</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <div style="position: relative">
+                <div class="white-wrap-bottom"></div>
+            </div>
+    <section class="abune_ol_row">
+        <h2>TT FIGHT CLUBA ABUNƏ OL</h2>
+        <div class="row">
+
+            <div class="col-6">
+                <p>ƏSAS FİLİAL</p>
+                <p>Dilarə Əliyeva 204<br>
+                esas@ttfightclub.az</p>
+                <a href="tel:00994124939493">+994 (012) 493 94 93</a>
+            </div>
+
+            <div class="col-6">
+                <p>ƏHMƏDLİ FİLİALI</p>
+                <p>Məhəmməd Hadi 201<br>
+                ehmedli@ttfightclub.az</p>
+                <a href="tel:00994123706589">+994 (012) 370 65 89</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="google_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4679658407968!2d49.84196371536036!3d40.376319879369866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5f117104b%3A0x91affb057663d9a0!2sTT+Fight+Club!5e0!3m2!1sen!2s!4v1551274548062" width="600" height="450" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>
+    </section>
+    
+{% endblock %}

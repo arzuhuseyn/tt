@@ -1,0 +1,171 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TT Fight Club</title>
+    <link rel="icon" href="{% static 'img/favicon.png' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="{% url 'index' %}"> <img class="tt-logo" src="{% static 'img/tt-fight.png' %}" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'index' %}">Ana Səhifə</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'telimciler' %}">Təlimçilər</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'heftelik' %}">Həftəlik dərslər</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'news' %}">Xəbərlər</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'contact' %}">Əlaqə</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menu_btn">
+                            <a href="{% url 'contact' %}" class="btn_2 d-none d-sm-block">Başla</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+
+
+    {% endblock %}
+     <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_1">
+                        <h4>Haqqımızda</h4>
+                        <p>Əsnək cədvəlimiz, peşəkar heyətimiz, əla tədris qabiliyyətimiz – 
+                            bu, bizə müvəffəqiyyətə və universal tanınmışlığa nail olmaq üçün 
+                            kömək edən “üç əsas meyardır”.</p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Keçidlər</h4>
+                        <div class="contact_info">
+                            <ul>
+                                <li><a href="{% url 'index' %}">Əsas Səhifə</a></li>
+                                <li><a href="{% url 'telimciler' %}">Təlimçilər</a></li>
+                                <li><a href="{% url 'heftelik' %}">Dərs Cədvəli</a></li>
+                                <li><a href="{% url 'news' %}">Xəbərlər</a></li>
+                                <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Əsas Filial</h4>
+                        <div class="contact_info">
+                            <p><span> Ünvan :</span> Məhəmməd Hadi 201</p>
+                            <p><span> Telefon :</span> +994 (012) 493 94 93</p>
+                            <p><span> Email : </span>esas@ttfightclub.az</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-6">
+                    <div class="single-footer-widget footer_3">
+                        <h4>Yeniliklər</h4>
+                        <p>Xəbərdar olmaq üçün abunə olun.</p>
+                        <form method="POST" action="{% url 'index' %}" >
+                                {% csrf_token %}
+                                {{emailsform}}
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <input type="text" name="emailform" id="emailform" class="form-control" placeholder='Email Adresiniz'>
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn" type="button"><i class="fas fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright_part_text">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p class="footer-text m-0"> All rights reserved | Website made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://kkm.az" target="_blank">KKM Group</a></p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="copyright_social_icon text-right">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="ti-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="{% static 'js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/masonry.pkgd.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/gijgo.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/accordion.js' %}"></script>
+</body>
+
+</html>

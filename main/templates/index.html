@@ -1,0 +1,170 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9">
+                    <div class="banner_text text-center">
+                        <div class="banner_text_iner">
+                            <h2>Premium <span>Fitness Club</span> </h2>
+                            <p>MMA & Crossfit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="extends_part section_padding">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-lg-5">
+                    <div class="extends_img">
+                        <img src="{% static 'img/excuses_video_bg.png' %}" alt="">
+                        <div class="extends_video">
+                            <div class="intro_video_iner text-center d-flex align-items-center">
+                                <div class="intro_video_icon">
+                                    <a id="play-video_1" class="video-play-button popup-youtube"
+                                        href="https://www.youtube.com/watch?v=lV0PIJ2yJJ8">
+                                        <span class="ti-control-play"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="extends_member_text">
+                        <h2>Müqayisə ediləbiləcəyimiz <br>
+                            bir rəqibimiz yoxdur</h2>
+                        <p>Biz, 2016-cı ildən fəaliyyətə başladıq. 
+                            Layihəmiz, qısa müddətdə uğurlu nəticələr əldə etməyi bacardı və 
+                            bu hələ də davam etməkdədir.Əsnək cədvəlimiz, peşəkar heyətimiz, 
+                            əla tədris qabiliyyətimiz – bu, bizə müvəffəqiyyətə və 
+                            universal tanınmışlığa nail olmaq üçün kömək edən “üç əsas meyardır”.</p>
+
+                        <p>
+                                Bugün, biz, həm peşəkarlar, həm də həvəskarlar üçün ən uyğun şəraiti formalaşdırmağı 
+                                bacarmışıq. Burada hədəflərinizə çatmaq və mükəmməl olmaq daha realdır. 
+                                Hər kəs, təlim səviyyəsindən asılı olmayaraq, maraq dairəsində qrup və ya fərdi 
+                                dərslərə qatıla bilər.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section>
+        <div class="benefits row">
+            <div class="col-3">
+                <img src="{% static 'img/ben-1.png' %}">
+                <h3>Fit Bədən</h3>
+                <p>Daha cəlbedici ol</p>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/ben-2.png' %}">
+                <h3>Sağlam ol</h3>
+                <p>Həyat standartlarını yüksəlt</p>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/ben-3.png' %}">
+                <h3>Artıq kilolardan qurtul</h3>
+                <p>Özünəinamın yüksək olsun</p>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/ben-4.png' %}">
+                <h3>Protein Deposu</h3>
+                <p>Əzələ kütləni artır</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="novs">
+            <h2>Tədris etdiyimiz idman növləri</h2>
+            <p>Uğurlu və sağlam fərd olmaq üçün seçimlər çoxdur<br>
+                    Hədəflərinizi reallaşdırın</p>
+        <div class="row tedris">  
+            <div class="col-3">
+                <img src="{% static 'img/tedris-1.png' %}">
+                <h3>MMA(COMBINATIONS)</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-2.png' %}">
+                <h3>KROSSFIT</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-3.png' %}">
+                <h3>FITNESS</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-4.png' %}">
+                <h3>STRETCHING</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-5.png' %}">
+                <h3>BOKS</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-6.png' %}">
+                <h3>CÜDO</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-7.png' %}">
+                <h3>AEROBİKA</h3>
+            </div>
+            <div class="col-3">
+                <img src="{% static 'img/tedris-8.png' %}">
+                <h3>BRAZİLİAN JUİJİTSU</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="abune_ol_row">
+        <h2>TT FIGHT CLUBA ABUNƏ OL</h2>
+        <div class="row">
+
+            <div class="col-6">
+                <p>ƏSAS FİLİAL</p>
+                <p>Dilarə Əliyeva 204<br>
+                esas@ttfightclub.az</p>
+                <a href="tel:00994124939493">+994 (012) 493 94 93</a>
+            </div>
+
+            <div class="col-6">
+                <p>ƏHMƏDLİ FİLİALI</p>
+                <p>Məhəmməd Hadi 201<br>
+                ehmedli@ttfightclub.az</p>
+                <a href="tel:00994123706589">+994 (012) 370 65 89</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest_news">
+        <h2>Sonuncu Xəbərlər</h2>
+        <p>TT Fight Clubda baş verən yeniliklərlə tanış olun</p>
+        <div class="last_three_news row">
+            {% for news in latest_posts %}
+            <div class="col-4">
+                <a href="{% url 'news-detail' news.pk %}">
+                <div class="news_box">
+                    <div class="news_image_box" style="background-image:url({{news.image.url}})">
+                    </div>
+                    <h2>{{news.title}}</h2>
+                    <p>{{news.feturedtext}}</p>
+                </div>
+            </a>
+            </div>
+           {% endfor %}
+        </div>
+    </section>
+
+    <section class="google_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4679658407968!2d49.84196371536036!3d40.376319879369866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da5f117104b%3A0x91affb057663d9a0!2sTT+Fight+Club!5e0!3m2!1sen!2s!4v1551274548062" width="600" height="450" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>
+    </section>
+   
+{% endblock %}
