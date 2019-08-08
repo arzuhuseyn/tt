@@ -193,5 +193,5 @@ STATICFILES_DIRS = (
 )
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-CKEDITOR_UPLOAD_PATH = "ttfightclub/media/"
+CKEDITOR_UPLOAD_PATH = "media"
 MEDIA_URL = '/media/'
