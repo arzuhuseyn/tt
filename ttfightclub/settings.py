@@ -25,7 +25,7 @@ SECRET_KEY = 'a1oks2g&5l_jqc$6m=@*q!for&!hef&d=5qdp7#i4rii!_=tat'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '134.209.227.55', 'ttfightclub.az']
 
 
 # Application definition
