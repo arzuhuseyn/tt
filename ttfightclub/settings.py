@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -165,12 +166,26 @@ CKEDITOR_CONFIGS = {
     } 
 }
 
-
+from django.utils.translation import ugettext_lazy as _
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'az'
+
+LANGUAGES = [
+    ('az', _('Azərbaycan dili')),
+    ('ru', _ ('Pусский')),
+    ('en', _('English'))
+]
+
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+
+LANGUAGE_CODE = 'az'
 
 TIME_ZONE = 'UTC'
 

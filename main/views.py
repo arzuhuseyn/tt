@@ -5,6 +5,8 @@ from django.views.generic import ListView, DetailView, FormView
 from django.views.generic.edit import FormMixin
 from .models import Contacts, News
 from .forms import ContactForm
+from django.views.generic.base import View
+from django.utils import translation
 
 
 def index(request):
@@ -45,3 +47,15 @@ class NewsList(ListView):
 class NewsDetail(DetailView):
     model = News
     template_name = 'news_detail.html'
+
+
+class ActivateLanguageView(View):
+    language_code = ''
+    redirect_to   = ''
+
+    def get(self, request, *args, **kwargs):
+        self.redirect_to   = request.META.get('HTTP_REFERER')
+        self.language_code = kwargs.get('language_code')
+        translation.activate(self.language_code)
+        request.session[translation.LANGUAGE_SESSION_KEY] = self.language_code
+        return redirect(self.redirect_to)

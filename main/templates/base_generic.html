@@ -1,4 +1,6 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!doctype html>
 <html lang="en">
 
@@ -43,24 +45,36 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'index' %}">Ana Səhifə</a>
+                                    <a class="nav-link" href="{% url 'index' %}">{% trans 'Ana Səhifə' %}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'telimciler' %}">Təlimçilər</a>
+                                    <a class="nav-link" href="{% url 'telimciler' %}">{% trans 'Təlimçilər' %}</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'heftelik' %}">Həftəlik dərslər</a>
+                                    <a class="nav-link" href="{% url 'heftelik' %}">{% trans 'Həftəlik dərslər' %}</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'news' %}">Xəbərlər</a>
+                                    <a class="nav-link" href="{% url 'news' %}">{% trans 'Xəbərlər' %}</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{% url 'contact' %}">Əlaqə</a>
+                                    <a class="nav-link" href="{% url 'contact' %}">{% trans 'Əlaqə' %}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <div class="dropdown">
+                                        {% get_current_language as LANGUAGE_CODE %}
+                                        <a class="nav-link"  style="text-transform: uppercase" href="#">{{LANGUAGE_CODE}}<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                                {% get_available_languages as languages %}
+                                                {% for language_code, language_name in languages %}
+                                          <li><a style="color: #000 !important;" href="https://ttfightclub.az/{{language_code}}">{{language_name}}</a></li>
+                                                {% endfor %}
+                                        </ul>
+                                      </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="menu_btn">
-                            <a href="{% url 'contact' %}" class="btn_2 d-none d-sm-block">Başla</a>
+                            <a href="{% url 'contact' %}" class="btn_2 d-none d-sm-block">{% trans 'Başla' %}</a>
                         </div>
                     </nav>
                 </div>
@@ -76,46 +90,44 @@
             <div class="row">
                 <div class="col-xl-3 col-sm-6 col-md-4">
                     <div class="single-footer-widget footer_1">
-                        <h4>Haqqımızda</h4>
-                        <p>Əsnək cədvəlimiz, peşəkar heyətimiz, əla tədris qabiliyyətimiz – 
-                            bu, bizə müvəffəqiyyətə və universal tanınmışlığa nail olmaq üçün 
-                            kömək edən “üç əsas meyardır”.</p>
+                        <h4>{% trans 'Haqqımızda' %}</h4>
+                        <p>{% trans 'Əsnək cədvəlimiz, peşəkar heyətimiz, əla tədris qabiliyyətimiz – bu, bizə müvəffəqiyyətə və universal tanınmışlığa nail olmaq üçün kömək edən “üç əsas meyardır”.' %}</p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-md-4">
                     <div class="single-footer-widget footer_2">
-                        <h4>Keçidlər</h4>
+                        <h4>{% trans 'Keçidlər' %}</h4>
                         <div class="contact_info">
                             <ul>
-                                <li><a href="{% url 'index' %}">Əsas Səhifə</a></li>
-                                <li><a href="{% url 'telimciler' %}">Təlimçilər</a></li>
-                                <li><a href="{% url 'heftelik' %}">Dərs Cədvəli</a></li>
-                                <li><a href="{% url 'news' %}">Xəbərlər</a></li>
-                                <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                                <li><a href="{% url 'index' %}">{% trans 'Əsas Səhifə' %}</a></li>
+                                <li><a href="{% url 'telimciler' %}">{% trans 'Təlimçilər' %}</a></li>
+                                <li><a href="{% url 'heftelik' %}">{% trans 'Dərs Cədvəli' %}</a></li>
+                                <li><a href="{% url 'news' %}">{% trans 'Xəbərlər' %}</a></li>
+                                <li><a href="{% url 'contact' %}">{% trans 'Əlaqə' %}</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-md-4">
                     <div class="single-footer-widget footer_2">
-                        <h4>Əsas Filial</h4>
+                        <h4>{% trans 'Əsas Filial' %}</h4>
                         <div class="contact_info">
-                            <p><span> Ünvan :</span> Məhəmməd Hadi 201</p>
-                            <p><span> Telefon :</span> +994 (12) 493 94 93</p>
-                            <p><span> Email : </span>info@ttfightclub.az</p>
+                            <p><span> {% trans 'Ünvan' %} :</span> {% trans 'Məhəmməd Hadi 201' %}</p>
+                            <p><span> {% trans 'Telefon' %} :</span> +994 (12) 493 94 93</p>
+                            <p><span> {% trans 'Email' %} : </span>info@ttfightclub.az</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 col-md-6">
                     <div class="single-footer-widget footer_3">
-                        <h4>Yeniliklər</h4>
-                        <p>Xəbərdar olmaq üçün abunə olun.</p>
+                        <h4>{% trans 'Yeniliklər' %}</h4>
+                        <p>{% trans 'Xəbərdar olmaq üçün abunə olun.' %}</p>
                         <form method="POST" action="{% url 'index' %}" >
                                 {% csrf_token %}
                                 {{emailsform}}
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" name="emailform" id="emailform" class="form-control" placeholder='Email Adresiniz'>
+                                    <input type="text" name="emailform" id="emailform" class="form-control" placeholder='{% trans "Email Adresiniz" %}'>
                                     <div class="input-group-append">
                                         <button type="submit" class="btn" type="button"><i class="fas fa-paper-plane"></i></button>
                                     </div>

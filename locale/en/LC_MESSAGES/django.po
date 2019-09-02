@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-02 13:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: main/templates/base_generic.html:48
+msgid "Ana Səhifə"
+msgstr "Home Page"
+
+#: main/templates/base_generic.html:51 main/templates/base_generic.html:91
+msgid "Təlimçilər"
+msgstr "Instructors"
+
+#: main/templates/base_generic.html:54
+msgid "Həftəlik dərslər"
+msgstr "Weekly schedule"
+
+#: main/templates/base_generic.html:57 main/templates/base_generic.html:93
+msgid "Xəbərlər"
+msgstr "News"
+
+#: main/templates/base_generic.html:60 main/templates/base_generic.html:94
+msgid "Əlaqə"
+msgstr "Contact"
+
+#: main/templates/base_generic.html:65
+msgid "Başla"
+msgstr "Start now"
+
+#: main/templates/base_generic.html:81
+msgid "Haqqımızda"
+msgstr "About us"
+
+#: main/templates/base_generic.html:82
+msgid ""
+"Əsnək cədvəlimiz, peşəkar heyətimiz, əla tədris qabiliyyətimiz – bu, bizə "
+"müvəffəqiyyətə və universal tanınmışlığa nail olmaq üçün kömək edən “üç əsas "
+"meyardır”."
+msgstr ""
+
+#: main/templates/base_generic.html:87
+msgid "Keçidlər"
+msgstr "Links"
+
+#: main/templates/base_generic.html:90
+msgid "Əsas Səhifə"
+msgstr "Home Page"
+
+#: main/templates/base_generic.html:92
+msgid "Dərs Cədvəli"
+msgstr "Weekly schedule"
+
+#: main/templates/base_generic.html:101
+msgid "Əsas Filial"
+msgstr "Main Filial"
+
+#: main/templates/base_generic.html:103
+msgid "Ünvan"
+msgstr "Address"
+
+#: main/templates/base_generic.html:103
+msgid "Məhəmməd Hadi 201"
+msgstr "Mahammad Hadi 201"
+
+#: main/templates/base_generic.html:104
+msgid "Telefon"
+msgstr "Phone"
+
+#: main/templates/base_generic.html:105
+msgid "Email"
+msgstr "Email"
+
+#: main/templates/base_generic.html:111
+msgid "Yeniliklər"
+msgstr "What`s new"
+
+#: main/templates/base_generic.html:112
+msgid "Xəbərdar olmaq üçün abunə olun."
+msgstr "Subscribe for news"
+
+#: main/templates/base_generic.html:118
+msgid "Email Adresiniz"
+msgstr "Your email address"
+
+#: ttfightclub/settings.py:177
+msgid "Azərbaycan dili"
+msgstr "Azerbaijani"
+
+#: ttfightclub/settings.py:178
+msgid "Pусский"
+msgstr "Russian"
+
+#: ttfightclub/settings.py:179
+msgid "English"
+msgstr "English"

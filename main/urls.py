@@ -10,4 +10,5 @@ urlpatterns = [
     path('news', views.NewsList.as_view(), name="news"),
     path('news/<int:pk>', views.NewsDetail.as_view(), name="news-detail"),
     path('contact', views.ContactPageView.as_view(), name="contact"),
+    path('language/activate/<language_code>/', views.ActivateLanguageView.as_view(), name='activate_language'),
 ]
