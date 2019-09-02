@@ -66,7 +66,7 @@
                                         <ul class="dropdown-menu">
                                                 {% get_available_languages as languages %}
                                                 {% for language_code, language_name in languages %}
-                                          <li><a style="color: #000 !important;" href="https://ttfightclub.az/{{language_code}}">{{language_name}}</a></li>
+                                          <li><a style="color: #000 !important;" href="https://ttfightclub.az/{% if language_code == 'az' %}{% else %}{{language_code}}{% endif %}">{{language_name}}</a></li>
                                                 {% endfor %}
                                         </ul>
                                       </div>
